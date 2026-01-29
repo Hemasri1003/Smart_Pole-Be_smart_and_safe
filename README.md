@@ -1,1 +1,0 @@
-# Smart-Pole---Be-smart-and-safe
