@@ -70,25 +70,6 @@ To design and implement a real-time emergency alert system embedded into smart s
 - **LED Indicator:** Highlights the affected location  
 - **Buzzer/Siren:** Alerts nearby individuals  
 
-## Sample Code Snippet
-
-```c
-if (digitalRead(btnPin) == HIGH) {
-  digitalWrite(ledPin, HIGH);
-  delay(3000);
-  digitalWrite(ledPin, LOW);
-  sgsm.listen();
-  sgsm.print("AT+CMGF=1\r");
-  delay(1000);
-  sgsm.print("AT+CMGS=\"+91XXXXXXXXXX\"\r");
-  delay(1000);
-  sgsm.print("https://www.google.com/maps/?q=");
-  sgsm.print(gpslat, 6);
-  sgsm.print(",");
-  sgsm.print(gpslon, 6);
-  delay(1000);
-  sgsm.write(0x1A);
-}
 ## Future Enhancements
 
 - Integration of camera modules for visual monitoring  
